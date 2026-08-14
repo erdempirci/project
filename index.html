@@ -3,93 +3,139 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Project Factory — gerçek problemlere çalışan çözümler, denemeler ve ürünler." />
-  <title>Project Factory — Build. Test. Ship.</title>
+  <meta name="description" content="Project Factory — gerçek problemlere çalışan dijital çözümler. Canlı demoları aç, beta ürünleri dene." />
+  <meta name="theme-color" content="#07080c" />
+  <title>Project Factory — Working Products, Not Slides.</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
   <div class="noise"></div>
-  <header class="nav shell">
-    <a class="brand" href="#top"><span class="brand-mark">PF</span><span>Project Factory</span></a>
-    <nav>
-      <a href="#products">Ürünler</a>
-      <a href="#lab">Lab</a>
-      <a href="#about">Hakkında</a>
-    </nav>
-    <a class="nav-cta" href="#products">Ürünleri Aç</a>
+
+  <header class="nav-wrap">
+    <div class="nav shell">
+      <a class="brand" href="#top"><span class="brand-mark">PF</span><span>Project Factory</span></a>
+      <nav>
+        <a href="#featured">Öne çıkanlar</a>
+        <a href="#products">Tüm ürünler</a>
+        <a href="#lab">Nasıl çalışır?</a>
+      </nav>
+      <a class="nav-cta" href="#products">Ürünleri keşfet <span>↘</span></a>
+    </div>
   </header>
 
   <main id="top">
     <section class="hero shell">
       <div class="hero-copy">
-        <div class="eyebrow"><span class="pulse"></span> factory.trendflowapp.com · LIVE</div>
-        <h1>Fikir değil.<br><span>Çalışan ürün.</span></h1>
-        <p>Project Factory; gerçek iş problemlerini hızlıca çalışan ürünlere dönüştüren bağımsız ürün laboratuvarı. Teknoloji ürün değildir. Çözdüğü problem üründür.</p>
+        <div class="eyebrow"><span class="pulse"></span> CANLI ÜRÜN LABORATUVARI</div>
+        <h1>Sunum değil.<br><span>Çalışan çözüm.</span></h1>
+        <p class="hero-lead">Gerçek problemleri seçiyoruz, hızlıca ürüne dönüştürüyoruz ve çalışan sürümü doğrudan kullanıcıyla buluşturuyoruz.</p>
         <div class="hero-actions">
-          <a class="btn primary" href="#products">Aktif ürünler</a>
+          <a class="btn primary" href="#featured">Canlı ürünleri aç <span>↗</span></a>
+          <a class="btn ghost" href="#lab">Nasıl çalışıyoruz?</a>
         </div>
-        <div class="stats">
-          <div><strong id="stat-products">12+</strong><span>ürün / prototip</span></div>
-          <div><strong>Problem-first</strong><span>çözüm odaklı geliştirme</span></div>
-          <div><strong>Ship fast</strong><span>test → ölç → geliştir</span></div>
+        <div class="trust-row">
+          <div><strong id="stat-products">16+</strong><span>ürün & prototip</span></div>
+          <div><strong>8+</strong><span>canlı demo</span></div>
+          <div><strong>24/7</strong><span>erişilebilir ürünler</span></div>
         </div>
       </div>
-      <div class="hero-panel">
-        <div class="terminal-top"><span></span><span></span><span></span><small>factory.log</small></div>
-        <div class="terminal-body">
-          <p><b>13:14</b> <span class="green">✓</span> Project Factory Hub — production</p>
-          <p><b>13:14</b> <span class="green">✓</span> SchoolFlow — live demo</p>
-          <p><b>13:14</b> <span class="green">✓</span> MutfakPlan — live demo</p>
-          <p><b>13:14</b> <span class="green">✓</span> YouTube Translator — beta download</p>
-          <p><b>13:14</b> <span class="yellow">●</span> MailTask — beta packaging</p>
-          <p><b>13:14</b> <span class="muted">→</span> One place for every working solution</p>
-          <div class="cursor-line">factory@project:~$ <span class="cursor">_</span></div>
+
+      <div class="hero-stage">
+        <div class="stage-glow"></div>
+        <div class="stage-card main-stage">
+          <div class="stage-head">
+            <div><span class="mini-label">FEATURED PRODUCT</span><h3>ShipReady</h3></div>
+            <span class="live-pill"><i></i> LIVE</span>
+          </div>
+          <p>App Store ve Google Play yayın sürecini geliştiriciler için daha anlaşılır ve yönetilebilir hale getiren ürün.</p>
+          <a href="https://shipready.vercel.app" target="_blank" rel="noreferrer">Canlı demoyu aç <span>↗</span></a>
         </div>
+        <div class="stage-card float-card fc-one"><span>SchoolFlow</span><b>Live</b></div>
+        <div class="stage-card float-card fc-two"><span>SpoolTrack</span><b>Live</b></div>
+        <div class="stage-card float-card fc-three"><span>YouTube Translator</span><b>Beta</b></div>
+        <div class="orbit-line orbit-a"></div>
+        <div class="orbit-line orbit-b"></div>
       </div>
     </section>
 
-    <section id="products" class="section shell">
-      <div class="section-head">
-        <div><span class="kicker">PRODUCTS</span><h2>Project Factory ürünleri</h2></div>
-        <p>Çalışan uygulamalar, pilotlar, yerel araçlar ve geliştirme aşamasındaki çözümler tek merkezde.</p>
+    <section class="value-strip">
+      <div class="shell value-grid">
+        <div><span>01</span><strong>Problem bul</strong><p>Gerçek, tekrarlayan ve para/zaman kaybettiren noktayı seç.</p></div>
+        <div><span>02</span><strong>Çalışan sürüm çıkar</strong><p>Sunum hazırlamak yerine doğrudan denenebilir ürün üret.</p></div>
+        <div><span>03</span><strong>Gerçek kullanıcıya ver</strong><p>Canlı demo veya beta ile hızlı geri bildirim topla.</p></div>
+      </div>
+    </section>
+
+    <section id="featured" class="section shell featured-section">
+      <div class="section-head premium-head">
+        <div><span class="kicker">LIVE NOW</span><h2>Şu an deneyebileceğin ürünler</h2></div>
+        <p>Mockup değil. Butona bas, ürünü aç ve kendin dene.</p>
+      </div>
+      <div class="featured-grid">
+        <a class="featured-card featured-hero" href="https://shipready.vercel.app" target="_blank" rel="noreferrer">
+          <div class="featured-top"><span class="product-symbol">SR</span><span class="live-pill"><i></i> CANLI</span></div>
+          <div class="featured-copy"><span class="mini-label">APP RELEASE OPERATIONS</span><h3>ShipReady</h3><p>Mobil uygulamanı mağazaya hazırlama ve yayınlama sürecini daha anlaşılır bir akışa dönüştürür.</p></div>
+          <div class="featured-link">Canlı demoyu aç <span>↗</span></div>
+        </a>
+        <a class="featured-card" href="https://schoolflow-ai.vercel.app" target="_blank" rel="noreferrer">
+          <div class="featured-top"><span class="product-symbol">SF</span><span class="live-pill"><i></i> CANLI</span></div>
+          <div class="featured-copy"><span class="mini-label">EDUCATION OPERATIONS</span><h3>SchoolFlow</h3><p>Ders programı çakışmalarını ve öğretmen görevlendirmesini kolaylaştırır.</p></div>
+          <div class="featured-link">Demoyu aç <span>↗</span></div>
+        </a>
+        <a class="featured-card" href="https://boru-takip.vercel.app" target="_blank" rel="noreferrer">
+          <div class="featured-top"><span class="product-symbol">ST</span><span class="live-pill"><i></i> CANLI</span></div>
+          <div class="featured-copy"><span class="mini-label">MARINE OPERATIONS</span><h3>SpoolTrack</h3><p>Spool ve ISO üretimini zone, sistem ve durum bazında sahadan takip eder.</p></div>
+          <div class="featured-link">Demoyu aç <span>↗</span></div>
+        </a>
+      </div>
+    </section>
+
+    <section id="products" class="section shell products-section">
+      <div class="section-head premium-head">
+        <div><span class="kicker">PRODUCT LIBRARY</span><h2>Tüm ürünler</h2></div>
+        <p>Canlı çözümler, beta testleri, yerel araçlar ve geliştirme aşamasındaki ürünler.</p>
       </div>
       <div class="filters" id="filters">
         <button class="filter active" data-filter="all">Tümü</button>
-        <button class="filter" data-filter="active">Aktif</button>
-        <button class="filter" data-filter="pilot">Pilot / Test</button>
+        <button class="filter" data-filter="active">Canlı</button>
+        <button class="filter" data-filter="pilot">Beta / Pilot</button>
         <button class="filter" data-filter="building">Geliştiriliyor</button>
         <button class="filter" data-filter="local">Yerel araç</button>
       </div>
       <div id="product-grid" class="grid"></div>
     </section>
 
-    <section id="lab" class="section shell">
-      <div class="section-head">
-        <div><span class="kicker">FACTORY LAB</span><h2>Üretim hattı</h2></div>
-        <p>Fikirleri biriktirmek yerine hızlıca doğrular, çalışan sürüme çevirir ve gerçek kullanıcıyla test ederiz.</p>
-      </div>
-      <div class="pipeline">
-        <div><span>01</span><h3>Find pain</h3><p>Gerçek ve tekrarlayan problemi bul.</p></div>
-        <div><span>02</span><h3>Build fast</h3><p>En küçük çalışan sürümü çıkar.</p></div>
-        <div><span>03</span><h3>Test real</h3><p>Kullanıcı, müşteri veya kendi işinde dene.</p></div>
-        <div><span>04</span><h3>Ship / Kill</h3><p>İşe yarıyorsa büyüt, yaramıyorsa bırak.</p></div>
+    <section id="lab" class="section shell lab-section">
+      <div class="lab-panel">
+        <div class="section-head premium-head lab-head">
+          <div><span class="kicker">THE FACTORY LOOP</span><h2>Fikirden canlı ürüne.</h2></div>
+          <p>Uzun roadmap yok. Küçük ama çalışan ürün, gerçek kullanım ve hızlı karar.</p>
+        </div>
+        <div class="pipeline">
+          <div><span>01</span><h3>Problemi seç</h3><p>Gerçek kullanıcı davranışından veya kendi işimizdeki sürtünmeden başlarız.</p></div>
+          <div><span>02</span><h3>İlk sürümü çıkar</h3><p>En kritik değeri sağlayan minimum çalışan ürünü yayınlarız.</p></div>
+          <div><span>03</span><h3>Gerçekte test et</h3><p>Demo, beta veya doğrudan kullanım ile hızlı veri ve geri bildirim toplarız.</p></div>
+          <div><span>04</span><h3>Büyüt veya bırak</h3><p>İşe yarıyorsa yatırım yaparız. Yaramıyorsa enerji tüketmesine izin vermeyiz.</p></div>
+        </div>
       </div>
     </section>
 
     <section id="about" class="section shell about">
-      <span class="kicker">ABOUT</span>
-      <h2>Project Factory bir şirket vitrini değil;<br>çalışan fikirlerin üretim alanı.</h2>
-      <p>Marine engineering, automation, creator tools, productivity, growth ve günlük yaşam problemlerine yönelik bağımsız ürünlerin ortak merkezi.</p>
-      <a class="btn primary" href="mailto:hello@trendflowapp.com">İletişim</a>
+      <span class="kicker">WHY PROJECT FACTORY</span>
+      <h2>Daha fazla fikir değil.<br><span>Daha fazla çalışan şey.</span></h2>
+      <p>Project Factory; mühendislikten günlük yaşama, iş operasyonlarından içerik araçlarına kadar gerçek problemlere küçük ama çalışan ürünler çıkaran bağımsız bir üretim alanı.</p>
+      <div class="about-actions"><a class="btn primary" href="#products">Ürünleri incele</a><a class="btn ghost" href="mailto:hello@trendflowapp.com">İletişime geç</a></div>
     </section>
   </main>
 
   <footer class="shell footer">
-    <span>© 2026 Project Factory</span>
-    <span>Build. Test. Ship.</span>
+    <div><span class="brand-mark mini">PF</span><strong>Project Factory</strong></div>
+    <span>Build less. Solve more. Ship real.</span>
   </footer>
 
   <div class="modal" id="product-modal" aria-hidden="true">
