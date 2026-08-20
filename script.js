@@ -8,12 +8,60 @@ const products = [
     primary:['Canlı demoyu aç','https://shipready.vercel.app'], secondary:null
   },
   {
+    icon:'JF', name:'JobFit', status:'Live demo', state:'active', area:'career', areaLabel:'Career', category:'Job Application Assistant',
+    availability:'Vercel production • canlı',
+    summary:'CV ile iş ilanını karşılaştırıp başvuru uyumunu ve eksik noktaları hızlıca gösterir.',
+    desc:'İş başvurusu öncesi “bu ilana ne kadar uyuyorum?” sorusuna hızlı ve somut cevap verir.',
+    detail:'CV metni ile iş ilanını karşılaştırır; 0–100 eşleşme skoru, güçlü anahtar kelimeler, eksikler ve başvuru öncesi iyileştirme önerisi üretir. Mevcut MVP API gerektirmeden çalışır.',
+    primary:['Canlı demoyu aç','https://job-fit-one.vercel.app'], secondary:null
+  },
+  {
+    icon:'IF', name:'InternFlow', status:'Prototype', state:'building', area:'career', areaLabel:'Career', category:'Internship Matching',
+    availability:'Repo hazır • canlı Vercel domaini henüz doğrulanmadı',
+    summary:'Mühendislik öğrencileri ile şirketlerin staj fırsatlarını daha doğru eşleştirmeyi hedefler.',
+    desc:'Türkiye odaklı mühendislik staj eşleştirme ve yerleştirme platformu.',
+    detail:'Öğrenci profili, yetenekler, bölüm, şehir ve şirket ihtiyaçlarını bir araya getirerek daha anlamlı staj eşleşmeleri üretmeyi hedefleyen platform. Canlı Vercel adresi bu turda doğrulanmadığı için demo butonu gösterilmiyor.',
+    primary:null, secondary:null
+  },
+  {
+    icon:'MF', name:'MarineFlow', status:'Live demo', state:'active', area:'naval', areaLabel:'Naval Engineering', category:'Hydraulic Calculation',
+    availability:'Vercel production • canlı',
+    summary:'Marine piping hatlarında basınç kaybı ve gerekli pompa basma yüksekliğini hızlıca hesaplar.',
+    desc:'Tek boru hattı için Darcy-Weisbach, fitting kayıpları, statik yükseklik ve toplam head hesabını tek ekranda toplar.',
+    detail:'Debi, çap, uzunluk, pürüzlülük, fitting ve statik yükseklik girdilerinden Reynolds sayısı, sürtünme faktörü, major/minor kayıplar ve toplam gerekli pompa basma yüksekliği üretir. Mühendislik prototipidir; tasarım ve satın alma öncesi sonuçlar bağımsız doğrulanmalıdır.',
+    primary:['Canlı demoyu aç','https://marine-flow-tau.vercel.app'], secondary:null
+  },
+  {
+    icon:'FD', name:'ForexLab', status:'Prototype', state:'building', area:'trading', areaLabel:'Trading', category:'Strategy Research',
+    availability:'Vercel-ready repo • canlı domain henüz doğrulanmadı',
+    summary:'H1 kapanış bazlı forex strateji sinyallerini webhook, TradingView ve dashboard akışında test eder.',
+    desc:'Manuel stratejiyi ölçülebilir ve tekrar test edilebilir bir araştırma sistemine dönüştüren trading laboratuvarı.',
+    detail:'H1 EBP sinyallerini TradingView Pine ile yakalar, webhook üzerinden sunucuda yeniden doğrular ve opsiyonel Supabase ile saklar. Sistem araştırma/eğitim amaçlıdır ve emir çalıştırmaz.',
+    primary:null, secondary:null
+  },
+  {
+    icon:'TR', name:'TradeDeck', status:'Live demo', state:'active', area:'trading', areaLabel:'Trading', category:'Account Risk Monitor',
+    availability:'Vercel production • canlı',
+    summary:'MT4, MT5 ve cTrader hesaplarını equity, günlük P&L ve drawdown açısından tek panelde izler.',
+    desc:'Prop ve kişisel trading hesaplarının risk kurallarını mobil odaklı tek ekranda toplar.',
+    detail:'Portföy equity, günlük P&L, hesap kartları, drawdown kullanımı ve prop-account risk ekranı sunar. Collector/EA bridge üzerinden gerçek terminal verisi alınacak şekilde tasarlanmıştır.',
+    primary:['Canlı demoyu aç','https://tradedeck-one.vercel.app'], secondary:null
+  },
+  {
     icon:'AV', name:'Answer Visibility', status:'Pilot', state:'pilot', area:'growth', areaLabel:'Growth', category:'Brand Visibility',
     availability:'Müşteri pilotu aktif • public app henüz yok',
     summary:'Bir markanın cevap motorlarında rakiplere karşı ne kadar görünür olduğunu ölçer.',
     desc:'Markaların ChatGPT ve benzeri cevap motorlarındaki görünürlüğünü rakiplerle kıyaslayan analiz sistemi.',
     detail:'Marka, kategori ve rakip bazında görünürlük sorguları üretir; sonuçları kıyaslar ve hangi konularda güçlenilmesi gerektiğini görünür hale getirir.',
     primary:null, secondary:null
+  },
+  {
+    icon:'GE', name:'Growth Engine', status:'Live internal', state:'active', area:'growth', areaLabel:'Growth', category:'Portfolio Growth Operations',
+    availability:'Vercel production • internal MVP',
+    summary:'Project Factory ürünleri için growth, SEO, GEO, social ve campaign çalışmalarını tek panelde toplar.',
+    desc:'Portföy genelinde pazarlama ve büyüme işlerini proje bazında görünür hale getiren ortak growth paneli.',
+    detail:'Proje bazlı Growth / SEO / GEO / Social skorları, CMO ve kanal ajanları, günlük campaign brief alanı ve portföy görünümü sunar. İç operasyon aracı olarak geliştiriliyor.',
+    primary:['Canlı paneli aç','https://project-factory-growth-engine.vercel.app'], secondary:null
   },
   {
     icon:'UG', name:'UGC Engine', status:'Live test', state:'pilot', area:'growth', areaLabel:'Growth', category:'Customer Acquisition',
@@ -30,6 +78,30 @@ const products = [
     desc:'Projeleri ve fikirleri sıralayan, gerektiğinde STOP / GO kararı veren odak sistemi.',
     detail:'Mission → Projects → Idea Vault → Score → STOP/GO → Today → Weekly Review akışıyla daha fazla iş yönetmek yerine daha fazla işi bitirmeyi hedefler.',
     primary:null, secondary:null
+  },
+  {
+    icon:'MB', name:'MindBack', status:'Live demo', state:'active', area:'social', areaLabel:'Social & Everyday', category:'Focus Awareness',
+    availability:'Vercel production • canlı PWA',
+    summary:'Zihnin dağıldığını tek dokunuşla kaydedip tekrar mevcut işe dönmeyi kolaylaştırır.',
+    desc:'Dikkat dağınıklığını bastırmak yerine fark edip “sonra” listesine park eden kişisel odak aracı.',
+    detail:'Günün tek odağı, tek dokunuşla zihin dağılması kaydı, kategori ve not, park listesi, günlük rapor ve 7 günlük temel metrikler sunar. v0.1 yerel depolama kullanır.',
+    primary:['Canlı demoyu aç','https://mindback-navy.vercel.app'], secondary:null
+  },
+  {
+    icon:'RT', name:'Rutin', status:'Live demo', state:'active', area:'social', areaLabel:'Social & Everyday', category:'Habit & Routine Tracking',
+    availability:'Vercel production • canlı PWA',
+    summary:'Günlük alışkanlık, seri, kilo ve günün odağını tek mobil akışta takip eder.',
+    desc:'Karmaşık planlama yerine günlük rutinin görülmesini ve tamamlanmasını kolaylaştıran kişisel takip aracı.',
+    detail:'Günlük alışkanlık listesi, tamamlanma oranı, streak, son 7 gün görünümü, kilo takibi ve günün odağını sunar. Veriler cihazdaki localStorage içinde tutulur.',
+    primary:['Canlı demoyu aç','https://rutin-drab.vercel.app'], secondary:null
+  },
+  {
+    icon:'KP', name:'Kapış Live', status:'Live beta', state:'pilot', area:'social', areaLabel:'Social & Everyday', category:'Social Prediction',
+    availability:'Vercel production • canlı beta',
+    summary:'İki seçenek arasında hızlı tahmin/oy verme deneyimini canlı eşleşmeler ve geri bildirimle test eder.',
+    desc:'Sağa/sola seçim mantığını sosyal tahmin ve karşılaştırma deneyimine dönüştüren canlı beta.',
+    detail:'Merkezi profiller, oylar, eşleşmeler ve geri bildirim Supabase üzerinde tutulur. Ürün gerçek kullanıcı davranışını ve hangi karşılaştırmaların ilgi çektiğini ölçmek için beta olarak çalışıyor.',
+    primary:['Canlı betayı aç','https://kapis-live.vercel.app'], secondary:null
   },
   {
     icon:'YT', name:'YouTube Translator', status:'Beta', state:'pilot', area:'media', areaLabel:'Media', category:'Voice & Translation',
