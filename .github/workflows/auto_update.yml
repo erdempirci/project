@@ -1,0 +1,44 @@
+name: Scheduled Data Update
+
+on:
+  schedule:
+    # Her gün Türkiye saatiyle 09:00'da çalışır (UTC 06:00)
+    - cron: '0 6 * * *'
+  workflow_dispatch: # İhtiyaç duyulduğunda GitHub UI üzerinden manuel tetikleme imkanı
+
+permissions:
+  contents: write
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Repoyu Klonla
+        uses: actions/checkout@v4
+
+      - name: Python Kurulumu
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Bağımlılıkları Yükle
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests beautifulsoup4
+
+      - name: Veri Güncelleme Scriptini Çalıştır
+        run: |
+          python scripts/update_data.py
+
+      - name: Değişiklikleri Commit ve Push Et
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action Bot"
+          git add .
+          if git diff --staged --quiet; then
+            echo "Yeni veri değişikliği yok."
+          else
+            git commit -m "chore(data): automated daily data update [skip ci]"
+            git push origin main
+          fi
