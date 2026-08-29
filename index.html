@@ -1,156 +1,28 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Project Factory — gerçek problemlere çalışan dijital çözümler. Canlı demoları aç, beta ürünleri dene." />
-  <meta name="theme-color" content="#07080c" />
-  <title>Project Factory — Working Products, Not Slides.</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TrendFlow Project Factory</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="ambient ambient-one"></div>
-  <div class="ambient ambient-two"></div>
-  <div class="noise"></div>
-
-  <header class="nav-wrap">
-    <div class="nav shell">
-      <a class="brand" href="#top"><span class="brand-mark">PF</span><span>Project Factory</span></a>
-      <nav>
-        <a href="#featured">Öne çıkanlar</a>
-        <a href="#products">Ürün alanları</a>
-        <a href="#lab">Nasıl çalışır?</a>
-      </nav>
-      <a class="nav-cta" href="#products">Ürünleri keşfet <span>↘</span></a>
-    </div>
-  </header>
-
-  <main id="top">
-    <section class="hero shell">
-      <div class="hero-copy">
-        <div class="eyebrow"><span class="pulse"></span> CANLI ÜRÜN LABORATUVARI</div>
-        <h1>Sunum değil.<br><span>Çalışan çözüm.</span></h1>
-        <p class="hero-lead">Gerçek problemleri seçiyoruz, hızlıca ürüne dönüştürüyoruz ve çalışan sürümü doğrudan kullanıcıyla buluşturuyoruz.</p>
-        <div class="hero-actions">
-          <a class="btn primary" href="#featured">Canlı ürünleri aç <span>↗</span></a>
-          <a class="btn ghost" href="#lab">Nasıl çalışıyoruz?</a>
-        </div>
-        <div class="trust-row">
-          <div><strong id="stat-products">25+</strong><span>ürün & prototip</span></div>
-          <div><strong>15+</strong><span>canlı ürün / demo</span></div>
-          <div><strong>9</strong><span>çözüm alanı</span></div>
-        </div>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <span class="logo-icon">⚡</span>
+        <h1>TrendFlow <span>Project Factory</span></h1>
       </div>
+      <p class="subtitle">Tüm mikro-SaaS, yapay zeka ve mühendislik projelerimin merkezi kontrol ve vitrin paneli.</p>
+      <div class="sync-info" id="sync-info">Veriler yükleniyor...</div>
+    </header>
 
-      <div class="hero-stage">
-        <div class="stage-glow"></div>
-        <div class="stage-card main-stage">
-          <div class="stage-head">
-            <div><span class="mini-label">FEATURED PRODUCT</span><h3>ShipReady</h3></div>
-            <span class="live-pill"><i></i> LIVE</span>
-          </div>
-          <p>App Store ve Google Play yayın sürecini geliştiriciler için daha anlaşılır ve yönetilebilir hale getiren ürün.</p>
-          <a href="https://shipready.vercel.app" target="_blank" rel="noreferrer">Canlı demoyu aç <span>↗</span></a>
-        </div>
-        <div class="stage-card float-card fc-one"><span>MarineFlow</span><b>Naval</b></div>
-        <div class="stage-card float-card fc-two"><span>TradeDeck</span><b>Trading</b></div>
-        <div class="stage-card float-card fc-three"><span>InternFlow</span><b>Career</b></div>
-        <div class="orbit-line orbit-a"></div>
-        <div class="orbit-line orbit-b"></div>
-      </div>
-    </section>
-
-    <section class="value-strip">
-      <div class="shell value-grid">
-        <div><span>01</span><strong>Problem bul</strong><p>Gerçek, tekrarlayan ve para/zaman kaybettiren noktayı seç.</p></div>
-        <div><span>02</span><strong>Çalışan sürüm çıkar</strong><p>Sunum hazırlamak yerine doğrudan denenebilir ürün üret.</p></div>
-        <div><span>03</span><strong>Gerçek kullanıcıya ver</strong><p>Canlı demo veya beta ile hızlı geri bildirim topla.</p></div>
-      </div>
-    </section>
-
-    <section id="featured" class="section shell featured-section">
-      <div class="section-head premium-head">
-        <div><span class="kicker">LIVE NOW</span><h2>Şu an deneyebileceğin ürünler</h2></div>
-        <p>Mockup değil. Butona bas, ürünü aç ve kendin dene.</p>
-      </div>
-      <div class="featured-grid">
-        <a class="featured-card featured-hero" href="https://shipready.vercel.app" target="_blank" rel="noreferrer">
-          <div class="featured-top"><span class="product-symbol">SR</span><span class="live-pill"><i></i> CANLI</span></div>
-          <div class="featured-copy"><span class="mini-label">APP RELEASE OPERATIONS</span><h3>ShipReady</h3><p>Mobil uygulamanı mağazaya hazırlama ve yayınlama sürecini daha anlaşılır bir akışa dönüştürür.</p></div>
-          <div class="featured-link">Canlı demoyu aç <span>↗</span></div>
-        </a>
-        <a class="featured-card" href="https://marine-flow-tau.vercel.app" target="_blank" rel="noreferrer">
-          <div class="featured-top"><span class="product-symbol">MF</span><span class="live-pill"><i></i> CANLI</span></div>
-          <div class="featured-copy"><span class="mini-label">NAVAL ENGINEERING</span><h3>MarineFlow</h3><p>Marine piping hatlarında basınç kaybı, fitting kayıpları ve pompa basma yüksekliği hesabını hızlandırır.</p></div>
-          <div class="featured-link">Demoyu aç <span>↗</span></div>
-        </a>
-        <a class="featured-card" href="https://tradedeck-one.vercel.app" target="_blank" rel="noreferrer">
-          <div class="featured-top"><span class="product-symbol">TR</span><span class="live-pill"><i></i> CANLI</span></div>
-          <div class="featured-copy"><span class="mini-label">TRADING OPERATIONS</span><h3>TradeDeck</h3><p>MT4, MT5 ve cTrader hesaplarını risk, drawdown ve performans açısından tek mobil panelde izler.</p></div>
-          <div class="featured-link">Demoyu aç <span>↗</span></div>
-        </a>
-      </div>
-    </section>
-
-    <section id="products" class="section shell products-section">
-      <div class="section-head premium-head">
-        <div><span class="kicker">PRODUCT LIBRARY</span><h2>Çözüm alanları</h2></div>
-        <p>Ürünleri teknolojisine göre değil, çözdüğü probleme ve kullanıldığı alana göre ayırıyoruz.</p>
-      </div>
-      <div class="filters" id="filters">
-        <button class="filter active" data-filter="all">Tümü</button>
-        <button class="filter" data-filter="naval">Naval Engineering</button>
-        <button class="filter" data-filter="trading">Trading</button>
-        <button class="filter" data-filter="career">Career</button>
-        <button class="filter" data-filter="business">Business Tools</button>
-        <button class="filter" data-filter="social">Social & Everyday</button>
-        <button class="filter" data-filter="education">Education</button>
-        <button class="filter" data-filter="growth">Growth</button>
-        <button class="filter" data-filter="productivity">Productivity</button>
-        <button class="filter" data-filter="media">Media</button>
-      </div>
-      <div id="product-grid" class="grid"></div>
-    </section>
-
-    <section id="lab" class="section shell lab-section">
-      <div class="lab-panel">
-        <div class="section-head premium-head lab-head">
-          <div><span class="kicker">THE FACTORY LOOP</span><h2>Fikirden canlı ürüne.</h2></div>
-          <p>Uzun roadmap yok. Küçük ama çalışan ürün, gerçek kullanım ve hızlı karar.</p>
-        </div>
-        <div class="pipeline">
-          <div><span>01</span><h3>Problemi seç</h3><p>Gerçek kullanıcı davranışından veya kendi işimizdeki sürtünmeden başlarız.</p></div>
-          <div><span>02</span><h3>İlk sürümü çıkar</h3><p>En kritik değeri sağlayan minimum çalışan ürünü yayınlarız.</p></div>
-          <div><span>03</span><h3>Gerçekte test et</h3><p>Demo, beta veya doğrudan kullanım ile hızlı veri ve geri bildirim toplarız.</p></div>
-          <div><span>04</span><h3>Büyüt veya bırak</h3><p>İşe yarıyorsa yatırım yaparız. Yaramıyorsa enerji tüketmesine izin vermeyiz.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="about" class="section shell about">
-      <span class="kicker">WHY PROJECT FACTORY</span>
-      <h2>Daha fazla fikir değil.<br><span>Daha fazla çalışan şey.</span></h2>
-      <p>Naval engineering’den trading ve kariyere, günlük yaşamdan iş operasyonlarına kadar gerçek problemlere küçük ama çalışan ürünler çıkaran bağımsız bir üretim alanı.</p>
-      <div class="about-actions"><a class="btn primary" href="#products">Ürünleri incele</a><a class="btn ghost" href="mailto:hello@trendflowapp.com">İletişime geç</a></div>
-    </section>
-  </main>
-
-  <footer class="shell footer">
-    <div><span class="brand-mark mini">PF</span><strong>Project Factory</strong></div>
-    <span>Build less. Solve more. Ship real.</span>
-  </footer>
-
-  <div class="modal" id="product-modal" aria-hidden="true">
-    <div class="modal-backdrop" data-close-modal></div>
-    <article class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-      <button class="modal-close" data-close-modal aria-label="Kapat">×</button>
-      <div id="modal-content"></div>
-    </article>
+    <main class="grid" id="projects-grid">
+      <!-- Proje Kartları script.js tarafından buraya dinamik eklenecek -->
+    </main>
   </div>
 
-  <script src="./script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
