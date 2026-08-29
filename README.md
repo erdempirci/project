@@ -1,1 +1,1 @@
-# project
+Project Factory portfolio site. Catalog is synchronized from the verified Vercel project list and maintained with solution-first product descriptions.
