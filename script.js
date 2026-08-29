@@ -1,5 +1,13 @@
 const products = [
   {
+    icon:'VK', name:'Viennalife NFC Kart', status:'Live demo', state:'active', area:'business', areaLabel:'Business Tools', category:'NFC & Digital Identity',
+    availability:'GitHub Pages • canlı demo',
+    summary:'Tek dokunuşla rehbere kaydedilen NFC ve QR destekli mobil dijital kartvizit.',
+    desc:'Fiziksel kartvizit ihtiyacını ortadan kaldıran, hızlı vCard indirme ve iletişim özellikli NFC kart çözümü.',
+    detail:'Erdem Pirci adına uyarlanan; telefon numarası (0552 832 62 13), tek dokunuşla rehbere vCard kaydı, WhatsApp ve doğrudan arama butonları içeren mobil uyumlu NFC dijital kartvizit.',
+    primary:['Canlı demoyu aç','https://erdempirci.github.io/viennalife-kart/'], secondary:null
+  },
+  {
     icon:'SR', name:'ShipReady', status:'Live demo', state:'active', area:'business', areaLabel:'Business Tools', category:'App Release Operations',
     availability:'Vercel production • canlı',
     summary:'App Store ve Google Play yayın sürecini tek kontrol akışına dönüştürür.',
