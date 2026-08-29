@@ -1,0 +1,85 @@
+name: Project Factory catalog sync
+
+on:
+  push:
+    branches: [master]
+    paths-ignore:
+      - '.github/workflows/catalog-sync.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  sync-catalog:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Sync verified Vercel catalog entries
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          p = Path('script.js')
+          s = p.read_text(encoding='utf-8')
+
+          replacements = {
+              'https://job-fit-one.vercel.app': 'https://job-fit-one.vercel.app',
+              'https://marine-flow-tau.vercel.app': 'https://marine-flow-tau.vercel.app',
+              'https://project-factory-growth-engine.vercel.app': 'https://project-factory-growth-engine.vercel.app',
+              'https://shipready.vercel.app': 'https://shipready.vercel.app',
+              'https://tradedeck-one.vercel.app': 'https://tradedeck-one.vercel.app',
+              'https://rutin-drab.vercel.app': 'https://rutin-drab.vercel.app',
+              'https://kalori-notu.vercel.app': 'https://kalori-notu.vercel.app',
+              'https://mindback-navy.vercel.app': 'https://mindback-navy.vercel.app',
+              'https://kapis-live.vercel.app': 'https://kapis-live.vercel.app',
+              'https://schoolflow-ai.vercel.app': 'https://schoolflow-ai.vercel.app',
+              'https://proof-coral-two.vercel.app': 'https://proof-coral-two.vercel.app',
+              'https://pid-analist.vercel.app': 'https://pid-analist.vercel.app',
+              'https://yemek-fikirleri.vercel.app': 'https://yemek-fikirleri.vercel.app',
+              'https://oyun-alani.vercel.app': 'https://oyun-alani.vercel.app',
+              'https://boru-takip.vercel.app': 'https://boru-takip.vercel.app',
+              'https://pdf-duzenliyici.vercel.app': 'https://pdf-duzenliyici.vercel.app',
+          }
+          for old, new in replacements.items():
+              s = s.replace(old, new)
+
+          additions = [
+          """  { icon:'JF', name:'JobFit', status:'Live demo', state:'active', area:'career', areaLabel:'Career', category:'Job Application Assistant', availability:'Vercel production • canlı', summary:'CV ile iş ilanını karşılaştırıp başvuru uyumunu ve eksik noktaları hızlıca gösterir.', desc:'İş başvurusu öncesi uyumu hızlıca kontrol etmeyi sağlayan pratik araç.', detail:'CV ve iş ilanını karşılaştırarak eşleşme skoru, güçlü noktalar ve eksik alanları görünür hale getirir.', primary:['Canlı demoyu aç','https://job-fit-one.vercel.app'], secondary:null },""",
+          """  { icon:'MF', name:'MarineFlow', status:'Live demo', state:'active', area:'naval', areaLabel:'Naval Engineering', category:'Hydraulic Calculation', availability:'Vercel production • canlı', summary:'Marine piping hatlarında basınç kaybı ve gerekli pompa basma yüksekliğini hızlıca hesaplar.', desc:'Gemi ve yat boru hatları için hızlı hidrolik hesap aracı.', detail:'Debi, boru, fitting ve statik yükseklik girdileriyle basınç kayıplarını ve gerekli toplam head değerini hesaplar.', primary:['Canlı demoyu aç','https://marine-flow-tau.vercel.app'], secondary:null },""",
+          """  { icon:'TR', name:'TradeDeck', status:'Live demo', state:'active', area:'trading', areaLabel:'Trading', category:'Account Risk Monitor', availability:'Vercel production • canlı', summary:'Trading hesaplarını equity, günlük P&L ve drawdown açısından tek panelde izler.', desc:'Trading hesaplarındaki performans ve risk durumunu tek ekranda takip eder.', detail:'MT4, MT5 ve cTrader hesapları için portföy, P&L ve drawdown görünümünü tek panelde toplar.', primary:['Canlı demoyu aç','https://tradedeck-one.vercel.app'], secondary:null },""",
+          """  { icon:'RT', name:'Rutin', status:'Live demo', state:'active', area:'social', areaLabel:'Social & Everyday', category:'Habit & Routine Tracking', availability:'Vercel production • canlı PWA', summary:'Günlük alışkanlıkları, serileri ve günün odağını tek mobil akışta takip eder.', desc:'Günlük rutini daha görünür ve sürdürülebilir hale getiren kişisel takip aracı.', detail:'Alışkanlıklar, streak, son 7 gün, kilo ve günlük odak takibini mobil odaklı tek akışta sunar.', primary:['Canlı demoyu aç','https://rutin-drab.vercel.app'], secondary:null },""",
+          """  { icon:'MB', name:'MindBack', status:'Live demo', state:'active', area:'social', areaLabel:'Social & Everyday', category:'Focus Awareness', availability:'Vercel production • canlı PWA', summary:'Dikkat dağıldığında bunu kaydedip tekrar mevcut işe dönmeyi kolaylaştırır.', desc:'Odak kaybını fark edip sonraya park etmeyi sağlayan kişisel takip aracı.', detail:'Günün odağı, dikkat dağılması kayıtları, park listesi ve temel günlük metrikler sunar.', primary:['Canlı demoyu aç','https://mindback-navy.vercel.app'], secondary:null },""",
+          """  { icon:'KP', name:'Kapış Live', status:'Live beta', state:'pilot', area:'social', areaLabel:'Social & Everyday', category:'Social Prediction', availability:'Vercel production • canlı beta', summary:'İki seçenek arasında hızlı oy verme ve karşılaştırma deneyimini test eder.', desc:'Sosyal tahmin ve karşılaştırma fikrini canlı kullanıcı davranışıyla test eden beta.', detail:'Oy, eşleşme ve geri bildirim akışlarını gerçek kullanıcılarla doğrulamak için geliştiriliyor.', primary:['Canlı betayı aç','https://kapis-live.vercel.app'], secondary:null },""",
+          """  { icon:'TD', name:'TeacherDesk', status:'Live demo', state:'active', area:'education', areaLabel:'Education', category:'Teacher Operations', availability:'Vercel production • canlı', summary:'Öğretmenlerin ders, nöbet ve görevlendirme listelerini tek yerde takip etmesini kolaylaştırır.', desc:'Öğretmenin günlük okul planını tek ekranda görünür hale getiren takip aracı.', detail:'Ders listeleri, nöbet planı ve görevlendirmeleri düzenli ve kolay erişilebilir biçimde takip etmeye yardımcı olur.', primary:['Canlı demoyu aç','https://schoolflow-ai.vercel.app'], secondary:null },""",
+          """  { icon:'PN', name:'P&ID Analyst', status:'Live demo', state:'active', area:'naval', areaLabel:'Naval Engineering', category:'Drawing Analysis', availability:'Vercel production • canlı', summary:'P&ID çizimlerini inceleyip ekipman ve hat bilgilerini daha hızlı değerlendirmeye yardımcı olur.', desc:'Mühendislik çizimlerini inceleme ve bilgi çıkarma sürecini hızlandıran araç.', detail:'P&ID yükleme, çizim üzerinde inceleme ve mühendislik verilerini değerlendirme akışını tek arayüzde toplar.', primary:['Canlı demoyu aç','https://pid-analist.vercel.app'], secondary:null },""",
+          """  { icon:'PF', name:'Review Analyzer', status:'Live demo', state:'active', area:'growth', areaLabel:'Growth', category:'Review Analysis', availability:'Vercel production • canlı', summary:'Müşteri yorumlarını analiz edip tekrar eden sorunları ve fırsatları görünür hale getirir.', desc:'Yorumlardan ürün ve müşteri deneyimi içgörüsü çıkaran analiz aracı.', detail:'Yorumları sınıflandırarak tekrar eden temaları ve iyileştirme alanlarını daha hızlı görmeyi sağlar.', primary:['Canlı demoyu aç','https://proof-coral-two.vercel.app'], secondary:null },""",
+          """  { icon:'MP', name:'MutfakPlan', status:'Live demo', state:'active', area:'social', areaLabel:'Social & Everyday', category:'Meal Planning', availability:'Vercel production • canlı', summary:'Evdeki malzemelerden ne pişirebileceğini bulmayı ve eksikleri alışveriş listesine dönüştürmeyi kolaylaştırır.', desc:'Her gün tekrar eden “ne pişirsem?” kararını hızlandıran pratik mutfak aracı.', detail:'Malzemeleri tarif fikirlerine dönüştürür ve eksik ürünleri alışveriş planına çevirmeyi kolaylaştırır.', primary:['Canlı demoyu aç','https://yemek-fikirleri.vercel.app'], secondary:null },""",
+          """  { icon:'OA', name:'Oyun Alanı Takip', status:'Live demo', state:'active', area:'business', areaLabel:'Business Tools', category:'Playground Operations', availability:'Vercel production • canlı PWA', summary:'Çocuk oyun alanlarında giriş, çıkış, süre ve günlük operasyon takibini kolaylaştırır.', desc:'Personelin yoğun saatlerde çocuk seanslarını hızlı ve düzenli takip etmesini sağlayan operasyon aracı.', detail:'Çocuk kaydı, aktif seans, rezervasyon ve sıra takibini tek mobil arayüzde toplar.', primary:['Canlı demoyu aç','https://oyun-alani.vercel.app'], secondary:null },""",
+          """  { icon:'ST', name:'SpoolTrack', status:'Live demo', state:'active', area:'naval', areaLabel:'Naval Engineering', category:'Spool Production Tracking', availability:'Vercel production • canlı', summary:'Boru spool üretimini, revizyonları ve imalat durumunu tek takip akışında görünür hale getirir.', desc:'Gemi ve yat boru imalatında spool bazlı üretim takibini kolaylaştıran araç.', detail:'Spool ve izometrik kayıtlarını, revizyon ve üretim durumlarını daha düzenli takip etmeye yardımcı olur.', primary:['Canlı demoyu aç','https://boru-takip.vercel.app'], secondary:null },""",
+          """  { icon:'PDF', name:'PDF Düzenleyici', status:'Live demo', state:'active', area:'productivity', areaLabel:'Productivity', category:'PDF Tools', availability:'Vercel production • canlı', summary:'PDF dosyalarını düzenleme ve metin çıkarma işlerini tek tarayıcı aracında toplar.', desc:'Günlük PDF işlerini hızlıca çözmek için hazırlanmış pratik belge aracı.', detail:'PDF yükleme, metin çıkarma ve düzenleme işlemlerini web üzerinden kolaylaştırır.', primary:['Canlı demoyu aç','https://pdf-duzenliyici.vercel.app'], secondary:null },""",
+          ]
+
+          # Only add entries whose product name is not already present.
+          insert = []
+          for item in additions:
+              name = re.search(r"name:'([^']+)'", item).group(1)
+              if f"name:'{name}'" not in s:
+                  insert.append(item)
+          if insert:
+              idx = s.rfind('];')
+              if idx == -1:
+                  raise SystemExit('products array terminator not found')
+              s = s[:idx] + '\n' + '\n'.join(insert) + '\n' + s[idx:]
+
+          p.write_text(s, encoding='utf-8')
+          PY
+
+      - name: Commit catalog changes
+        run: |
+          git config user.name 'Project Factory Bot'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add script.js
+          git diff --cached --quiet && exit 0
+          git commit -m 'sync Project Factory catalog with Vercel projects'
+          git push
