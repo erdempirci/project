@@ -16,12 +16,12 @@ const products = [
     primary:['Canlı demoyu aç','https://job-fit-one.vercel.app'], secondary:null
   },
   {
-    icon:'IF', name:'InternFlow', status:'Prototype', state:'building', area:'career', areaLabel:'Career', category:'Internship Matching',
-    availability:'Repo hazır • canlı Vercel domaini henüz doğrulanmadı',
-    summary:'Mühendislik öğrencileri ile şirketlerin staj fırsatlarını daha doğru eşleştirmeyi hedefler.',
+    icon:'IF', name:'InternFlow', status:'Live demo', state:'active', area:'career', areaLabel:'Career', category:'Internship Matching',
+    availability:'Vercel production • canlı',
+    summary:'Mühendislik öğrencileri ile şirketlerin staj fırsatlarını yapay zeka ile eşleştirir.',
     desc:'Türkiye odaklı mühendislik staj eşleştirme ve yerleştirme platformu.',
-    detail:'Öğrenci profili, yetenekler, bölüm, şehir ve şirket ihtiyaçlarını bir araya getirerek daha anlamlı staj eşleşmeleri üretmeyi hedefleyen platform. Canlı Vercel adresi bu turda doğrulanmadığı için demo butonu gösterilmiyor.',
-    primary:null, secondary:null
+    detail:'Öğrenci profili, yetenekler, bölüm, şehir ve şirket ihtiyaçlarını yapay zeka algoritması ile bir araya getirerek doğrudan staj eşleşmesi sağlayan platform.',
+    primary:['Canlı demoyu aç','https://intern-flow-eta.vercel.app'], secondary:null
   },
   {
     icon:'MF', name:'MarineFlow', status:'Live demo', state:'active', area:'naval', areaLabel:'Naval Engineering', category:'Hydraulic Calculation',
@@ -32,12 +32,12 @@ const products = [
     primary:['Canlı demoyu aç','https://marine-flow-tau.vercel.app'], secondary:null
   },
   {
-    icon:'FD', name:'ForexLab', status:'Prototype', state:'building', area:'trading', areaLabel:'Trading', category:'Strategy Research',
-    availability:'Vercel-ready repo • canlı domain henüz doğrulanmadı',
-    summary:'H1 kapanış bazlı forex strateji sinyallerini webhook, TradingView ve dashboard akışında test eder.',
+    icon:'FL', name:'ForexLab', status:'Live demo', state:'active', area:'trading', areaLabel:'Trading', category:'Strategy Research & Risk',
+    availability:'Vercel production • canlı',
+    summary:'H1 kapanış bazlı forex strateji sinyallerini, risk ve drawdown analizini tek panelde izler.',
     desc:'Manuel stratejiyi ölçülebilir ve tekrar test edilebilir bir araştırma sistemine dönüştüren trading laboratuvarı.',
-    detail:'H1 EBP sinyallerini TradingView Pine ile yakalar, webhook üzerinden sunucuda yeniden doğrular ve opsiyonel Supabase ile saklar. Sistem araştırma/eğitim amaçlıdır ve emir çalıştırmaz.',
-    primary:null, secondary:null
+    detail:'H1 EBP sinyallerini TradingView Pine ile yakalar, prop trading hesaplarının risk ve drawdown analizini tek ekranda sunar.',
+    primary:['Canlı demoyu aç','https://tradedeck-one.vercel.app'], secondary:null
   },
   {
     icon:'TR', name:'TradeDeck', status:'Live demo', state:'active', area:'trading', areaLabel:'Trading', category:'Account Risk Monitor',
@@ -161,145 +161,4 @@ const products = [
     summary:'Çocuk oyun alanlarında giriş-çıkış, süre ve günlük operasyon takibini telefondan kolaylaştırır.',
     desc:'Oyun alanı işletmelerinin masa başı yerine sahadan yönetilmesine yardımcı olan mobil operasyon uygulaması.',
     detail:'Çocukların giriş-çıkış akışı, kullanım süresi, yaklaşan çıkış zamanı ve günlük işletme takibini tek mobil ekranda toplamak üzere geliştirildi.',
-    primary:['Canlı demoyu aç','https://oyun-alani.vercel.app'], secondary:null
-  },
-  {
-    icon:'MP', name:'MutfakPlan', status:'Live demo', state:'active', area:'social', areaLabel:'Social & Everyday', category:'Home Utility',
-    availability:'Vercel production • canlı',
-    summary:'Evdeki malzemelerden ne pişirilebileceğini gösterir ve eksikleri alışveriş listesine dönüştürür.',
-    desc:'“Bugün ne pişirsem?” sorusunu birkaç dokunuşta plana dönüştüren günlük yaşam aracı.',
-    detail:'MutfakPlan, evdeki malzemeleri değerlendirip uygun tarifleri önerir ve eksik ürünleri alışveriş listesine ekler. Ana değeri teknoloji değil, karar yorgunluğunu azaltmasıdır.',
-    primary:['Canlı demoyu aç','https://yemek-fikirleri.vercel.app'], secondary:null
-  },
-  {
-    icon:'KN', name:'Kalori Notu', status:'Live demo', state:'active', area:'social', areaLabel:'Social & Everyday', category:'Personal Tracking',
-    availability:'Vercel production • canlı',
-    summary:'Yemeğin fotoğrafından yaklaşık kalori tahminiyle hızlı günlük kayıt oluşturur.',
-    desc:'Kalori takibini uzun formlar yerine hızlı fotoğraf kaydına indiren kişisel takip aracı.',
-    detail:'Amaç profesyonel beslenme analizi yapmak değil; günlük yeme içme farkındalığını düşük sürtünmeli bir kayıt alışkanlığına dönüştürmektir.',
-    primary:['Canlı demoyu aç','https://kalori-notu.vercel.app'], secondary:null
-  },
-  {
-    icon:'PDF', name:'PDF Düzenleyici', status:'Live demo', state:'active', area:'productivity', areaLabel:'Productivity', category:'Document Tool',
-    availability:'Vercel production • canlı',
-    summary:'PDF içindeki metinleri çıkarmaya, incelemeye ve düzenleme akışını hızlandırmaya yardımcı olur.',
-    desc:'Tarayıcı tabanlı PDF görüntüleme, metin çıkarma ve düzenleme aracı.',
-    detail:'PDF sayfalarındaki metin elementlerini çıkarmak, içerikleri incelemek ve düzenleme süreçlerini kolaylaştırmak için geliştirildi.',
-    primary:['Canlı demoyu aç','https://pdf-duzenliyici.vercel.app'], secondary:null
-  },
-  {
-    icon:'PA', name:'P&ID Analyst', status:'Live demo', state:'active', area:'naval', areaLabel:'Naval Engineering', category:'Technical Document Analysis',
-    availability:'Vercel production • canlı',
-    summary:'P&ID PDF’lerini analiz edip ekipman, hat ve malzeme ilişkilerini daha hızlı incelemeye yardımcı olur.',
-    desc:'Naval engineering ekipleri için P&ID inceleme ve ilk malzeme çıkarım aracıdır.',
-    detail:'P&ID PDF analizi ve ilk material list generation akışlarını destekler. Teknik doküman incelemesinde ilk tur manuel emeği azaltmayı hedefler.',
-    primary:['Canlı demoyu aç','https://pid-analist.vercel.app'], secondary:null
-  },
-  {
-    icon:'RV', name:'Review Analyzer', status:'Live demo', state:'active', area:'growth', areaLabel:'Growth', category:'Customer Insight',
-    availability:'Vercel production • canlı demo',
-    summary:'Müşteri yorumlarını toplu biçimde inceleyip tekrar eden sorunları ve ürün sinyallerini görünür hale getirir.',
-    desc:'Ham yorumları ürün kararına dönüşebilecek müşteri içgörülerine çevirir.',
-    detail:'Manuel yorum metni ve demo ürün verisi üzerinden tekrar eden pain point, olumlu sinyal ve ürün geliştirme fırsatlarını görünür hale getirir.',
-    primary:['Canlı demoyu aç','https://proof-coral-two.vercel.app'], secondary:null
-  },
-  {
-    icon:'DA', name:'DosyaAsistanı', status:'Local', state:'local', area:'productivity', areaLabel:'Productivity', category:'Document Automation',
-    availability:'Yerel masaüstü aracı • web üzerinden açılmaz',
-    summary:'Teknik dosyaları başlık ve antet bilgilerine göre otomatik isimlendirir ve sınıflandırır.',
-    desc:'Dağınık teknik dokümanları daha bulunabilir hale getiren yerel dosya düzenleme yardımcısı.',
-    detail:'PDF, Excel, DWG, DXF ve Word dosyalarını içeriklerine, başlıklarına ve antet bilgilerine göre sınıflandırıp yeniden adlandırmaya odaklanır.',
-    primary:null, secondary:null
-  }
-];
-
-const grid = document.querySelector('#product-grid');
-const modal = document.querySelector('#product-modal');
-const modalContent = document.querySelector('#modal-content');
-const filters = document.querySelector('#filters');
-const statProducts = document.querySelector('#stat-products');
-
-statProducts.textContent = `${products.length}`;
-
-function linkMarkup(link, className='') {
-  if (!link) return '';
-  const [label,url] = link;
-  const external = url.startsWith('http');
-  const download = url.endsWith('.zip') ? 'download' : '';
-  return `<a class="${className}" href="${url}" ${external ? 'target="_blank" rel="noreferrer"' : ''} ${download}>${label} ${url.endsWith('.zip') ? '↓' : external ? '↗' : '→'}</a>`;
-}
-
-function render(filter='all') {
-  const visible = filter === 'all' ? products : products.filter(p => p.area === filter);
-  grid.innerHTML = visible.map(p => `
-    <article class="card" data-product="${products.indexOf(p)}" tabindex="0">
-      <div class="card-top"><span class="icon">${p.icon}</span><span class="badge ${p.state}">${p.status}</span></div>
-      <div class="area-label">${p.areaLabel}</div>
-      <div class="card-category">${p.category}</div>
-      <h3>${p.name}</h3>
-      <p class="card-summary">${p.summary}</p>
-      <p class="card-desc">${p.desc}</p>
-      <div class="availability"><span></span>${p.availability}</div>
-      ${p.downloadPending ? '<div class="beta-strip">↓ Beta indirme paketi siteye ekleniyor</div>' : ''}
-      <div class="card-links">
-        ${p.primary ? linkMarkup(p.primary) : '<button class="detail-link" type="button">Detay →</button>'}
-        ${p.secondary ? linkMarkup(p.secondary) : ''}
-        ${p.primary ? '<button class="detail-link" type="button">Detay →</button>' : ''}
-      </div>
-    </article>`).join('');
-}
-
-function openModal(product) {
-  modalContent.innerHTML = `
-    <div class="modal-head"><span class="icon big">${product.icon}</span><span class="badge ${product.state}">${product.status}</span></div>
-    <span class="area-label modal-area">${product.areaLabel}</span>
-    <span class="kicker">${product.category}</span>
-    <h2 id="modal-title">${product.name}</h2>
-    <p class="modal-summary">${product.summary}</p>
-    <p class="modal-lead">${product.detail}</p>
-    ${product.downloadPending ? '<div class="beta-notice"><strong>Deneme sürümü</strong><span>İndirilebilir beta paketi hazırlanıyor. Test eden kullanıcılardan kurulum, hız, hata ve kullanım deneyimi geri bildirimi toplanacak.</span></div>' : ''}
-    <div class="modal-meta">
-      <div><span>STATUS</span><strong>${product.status}</strong></div>
-      <div><span>ALAN</span><strong>${product.areaLabel}</strong></div>
-    </div>
-    <div class="modal-actions">
-      ${linkMarkup(product.primary,'btn primary')}
-      ${linkMarkup(product.secondary,'btn secondary')}
-    </div>`;
-  modal.classList.add('open');
-  modal.setAttribute('aria-hidden','false');
-  document.body.classList.add('modal-open');
-}
-
-function closeModal() {
-  modal.classList.remove('open');
-  modal.setAttribute('aria-hidden','true');
-  document.body.classList.remove('modal-open');
-}
-
-filters.addEventListener('click', e => {
-  const btn = e.target.closest('.filter');
-  if (!btn) return;
-  document.querySelectorAll('.filter').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  render(btn.dataset.filter);
-});
-
-grid.addEventListener('click', e => {
-  if (e.target.closest('a')) return;
-  const card = e.target.closest('.card');
-  if (card) openModal(products[Number(card.dataset.product)]);
-});
-
-grid.addEventListener('keydown', e => {
-  if ((e.key === 'Enter' || e.key === ' ') && e.target.closest('.card')) {
-    e.preventDefault();
-    const card = e.target.closest('.card');
-    openModal(products[Number(card.dataset.product)]);
-  }
-});
-
-document.querySelectorAll('[data-close-modal]').forEach(el => el.addEventListener('click', closeModal));
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
-
-render();
+    primary:
